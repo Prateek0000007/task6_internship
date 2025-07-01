@@ -1,6 +1,6 @@
 # Password Strength Evaluation
 
-This project is part of a Cyber Security Internship task where we evaluate the strength of various passwords using the [Password Monster](https://www.passwordmonster.com/) tool.
+This task is part of a Cyber Security Internship task where we evaluate the strength of various passwords using the [Password Monster](https://www.passwordmonster.com/) tool.
 
 ## 🔧 Tool Used
 **PasswordMonster.com** — A free online password strength checker that estimates time to crack passwords based on character sets and length.
@@ -20,17 +20,38 @@ This project is part of a Cyber Security Internship task where we evaluate the s
 | 9&dL@P$4mQr    | 11     | Very Strong  | 5 Thousand Years  | Uppercase, Lowercase, Numbers, Symbols    |
 | R@8k#Lm!4Tz    | 11     | Very Strong  | 1 Million Years   | Uppercase, Lowercase, Numbers, Symbols    |
 
-## 🧠 Key Learnings
+## 🔐 Common Password Attacks
 
-- **Short passwords** and those with **simple patterns** (e.g., only numbers or lowercase letters) are extremely weak.
-- **Mixing uppercase, lowercase, numbers, and symbols** increases password strength significantly.
-- **Length matters** — longer passwords are harder to crack.
-- Even common formats with multiple character sets (like "Hello@123") can still be weak if the length is low or the pattern is predictable.
-- Strong passwords are those with **randomized character sets** and **long length** (10+ characters).
+### 1. Brute Force Attack
+- **Definition**: Tries every possible combination until the correct password is found.
+- **Effective Against**: Short or simple passwords.
+- **Example**: Trying `0000`, `0001`, ..., up to `9999`.
+- **Prevention**:
+  - Use long passwords (12+ characters).
+  - Enable account lockout after failed attempts.
+
+### 2. Dictionary Attack
+- **Definition**: Uses a list of common passwords or words from the dictionary.
+- **Effective Against**: Common or predictable passwords.
+- **Example**: `password`, `admin123`, `qwerty`.
+- **Prevention**:
+  - Avoid real words, names, or known patterns.
+  - Use a mix of random characters.
+
+## 🧠 How Password Complexity Affects Security
+
+- **Longer = Stronger**: More characters make brute force attacks take exponentially longer.
+- **Character Variety**: Including uppercase, lowercase, numbers, and symbols increases the number of possible combinations.
+- **Unpredictability Matters**: Avoid dictionary words and common substitutions like `P@ssw0rd`.
+
+### Example:
+- `123456` → cracked instantly (very weak).
+- `R@8k#Lm!4Tz` → estimated 1 million years to crack (very strong).
 
 ## ✅ Best Practices
 
 - Use at least **12 characters**.
-- Combine **uppercase, lowercase, numbers, and symbols**.
-- Avoid dictionary words or common patterns.
-- Use a **password manager** to store complex passwords.
+- Mix **uppercase, lowercase, numbers, and symbols**.
+- Avoid using **real words** or **common patterns**.
+- Store passwords in a **secure password manager**.
+- Enable **multi-factor authentication (MFA)** wherever available.
